@@ -247,6 +247,16 @@ class ExpressionBuilder
     }
 
     /**
+     * @param $expr
+     *
+     * @return ContainExpression
+     */
+    public function contain($expr)
+    {
+        return new ContainExpression($expr);
+    }
+
+    /**
      * Create grouped expression: (<expr1> <expr2> <expr3>)
      *
      * @param Expression|string $expr, ...
