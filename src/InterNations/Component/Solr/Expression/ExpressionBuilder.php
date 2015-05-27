@@ -253,7 +253,9 @@ class ExpressionBuilder
      */
     public function contain($expr)
     {
-        return new ContainExpression($expr);
+        $expr =  new ContainExpression($expr);
+
+        return $this->lit($expr);
     }
 
     /**
